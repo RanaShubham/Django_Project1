@@ -1,0 +1,96 @@
+.secondBlock
+{
+    text-align: center;
+    color: rgb(208, 245, 208);
+    text-shadow: black 8px 8px 8px;
+    font-style: italic;
+    align-content: center;
+}
+#card{
+    font-style: oblique;
+    font-size: 20px;
+    font-weight: 600;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+}      
+.heading
+{
+    text-align: center;
+    color: rgb(208, 245, 208);
+    text-decoration: underline;
+    text-shadow: black 8px 8px 8px;
+}
+nav
+{
+    background-color: rgba(22, 22, 22, 0.4);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom:5px;
+    width: center;
+}      
+.container {
+    font-size: 40px;
+    width: 100%;
+    background:transparent;
+    display: block;
+}
+body {
+    background-image: url(./Resources/form-background-1024x683.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+.inputName {
+    margin-left:43px ;
+    height: 30px;
+    width: 250px;
+    border-width: 4px;
+}
+.inputMessage{
+    height: 30px;
+    width: 250px;
+    border-width: 4px
+}
+.button1{
+    width: 100px;
+    height: 35px;
+    background-color: rgb(208, 245, 208);
+    font-weight: 750;
+    margin-left: 100px;
+    margin-right: 100px;
+    /* border-width: 4px; */
+    border-color:rgb(212, 216, 214);
+    /* align-items: center; */
+    display: inline-flex; /*Important*/
+}
+.button1:hover{
+    background-color: rgb(252, 158, 158);
+}
+.button2{
+    width: 100px;
+    height: 35px;
+    background-color: rgb(208, 245, 208);
+    font-weight: 750;
+    margin-left: 100px;
+    margin-right: 100px;
+    /* border-width: 4px; */
+    border-color:rgb(212, 216, 214);
+    text-align: center;
+    display: inline-flex; /*Important*/
+}
+.button2:hover{
+    background-color: rgb(252, 158, 158);
+}
+footer{
+    text-align: center;
+    color: blanchedalmond;
+}
+a{
+    color: white;
+}
+a:visited {
+    color: turquoise;
+}
+a:hover {
+    color: hotpink;
+}
