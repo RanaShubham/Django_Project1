@@ -8,7 +8,7 @@ function handleSubmitClick()
 
     if (!name || !message)
     {
-        alert("Please enter name and message.")
+        alert("Please enter name and message.");
         return
     }
     var cardObject = document.getElementById("card");
@@ -23,20 +23,26 @@ function handleSubmitClick()
 
 function handleRandomCards()
 {
-    alert("I was clicked")
-    var myCardList = []
-    for (let index = 1; index < 10; index++) {
-        var item = styleCard("Name"+index, "Message"+index, document.createElement("div"));
-        myCardList.push(item)
-    }
-    myCardList.forEach(item => {
-        document.getElementById("card").append(item);
+    console.log("HELLO")
+    $(document).ready(function()
+    {
+        $.get("http://127.0.0.1:8000/card_app", function(data, status)
+        {
+            var data_arr = JSON.parse(data);
+            if (data_arr.length == 0)
+            {
+                throw 'No data availabe'
+            }
+            data_arr.forEach(element => 
+            {
+                var item = makeCard(element["name"], element["message"], document.createElement("div"));
+                document.getElementById("card").append(item);
+            });
+        });
     });
-
-    alert("And I reached the end.")
 }
 
-function styleCard(name, message, element)
+function makeCard(name, message, element)
 {
     element.style.border = "solid";
     element.style.borderStyle = "groove";
@@ -46,6 +52,6 @@ function styleCard(name, message, element)
     element.style.overflow = "hidden";
     element.style.textAlign = "center";
     element.style.backgroundColor = "#66ffff";
-    element.innerHTML = `Welcome ${name} <br><br> ${message}`;
+    element.innerHTML = `Welcome: ${name} <br><br> ${message}`;
     return element;
 }
